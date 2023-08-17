@@ -149,3 +149,24 @@ function removeHighlight() {
         }
       }, 110);
     }, 4500); // 6000 Millisekunden = 6 Sekunden
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const shortText = document.querySelector(".short-text");
+      const fullText = document.querySelector(".full-text");
+      const toggleButton = document.querySelector(".toggle-button");
+    
+      toggleButton.addEventListener("click", function() {
+        if (fullText.style.display === "none") {
+          fullText.style.display = "block";
+          shortText.style.display = "none";
+          toggleButton.textContent = "Weniger Anzeigen";
+        } else {
+          fullText.style.display = "none";
+          shortText.style.display = "block";
+          toggleButton.textContent = "Mehr Lesen";
+        }
+      });
+    });
